@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>専攻科 修了要件チェッカー</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --bg2: #f5f5f4;
+    --bg3: #f0efee;
+    --text: #1a1a18;
+    --text2: #6b6b67;
+    --text3: #9d9d99;
+    --border: rgba(0,0,0,0.10);
+    --border2: rgba(0,0,0,0.18);
+    --ok: #1a7f4b;
+    --ok-bg: #eaf6ef;
+    --ng: #c0392b;
+    --ng-bg: #fdecea;
+    --warn: #b45309;
+    --warn-bg: #fef3e2;
+    --info: #1a5fa8;
+    --info-bg: #e8f0fb;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1a;
+      --bg2: #242422;
+      --bg3: #2c2c2a;
+      --text: #f0efe8;
+      --text2: #a0a09a;
+      --text3: #6a6a66;
+      --border: rgba(255,255,255,0.10);
+      --border2: rgba(255,255,255,0.18);
+      --ok: #34d27a;
+      --ok-bg: #0d2e1e;
+      --ng: #f07060;
+      --ng-bg: #2e0f0a;
+      --warn: #f59e0b;
+      --warn-bg: #2a1e08;
+      --info: #60a5fa;
+      --info-bg: #0a1e38;
+    }
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+    background: var(--bg3);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 1.5rem; }
+
+  /* top selectors */
+  .top-card {
+    background: var(--bg);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .selector-row { display: flex; align-items: center; gap: 12px; }
+  .selector-label { font-size: 13px; color: var(--text2); min-width: 64px; flex-shrink: 0; }
+  .year-select {
+    padding: 6px 10px;
+    border-radius: var(--radius-md);
+    border: 0.5px solid var(--border2);
+    background: var(--bg2);
+    color: var(--text);
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 150px;
+  }
+  .dept-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .dept-tab {
+    padding: 5px 16px; border-radius: 20px;
+    border: 0.5px solid var(--border2);
+    background: transparent; cursor: pointer;
+    font-size: 13px; color: var(--text2);
+    transition: all 0.15s;
+  }
+  .dept-tab.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+  /* verdict */
+  .verdict {
+    display: flex; align-items: center; gap: 12px;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-lg);
+    border: 0.5px solid var(--border);
+    background: var(--bg);
+    margin-bottom: 1rem;
+  }
+  .verdict-icon {
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 600; flex-shrink: 0;
+  }
+  .verdict.ok .verdict-icon { background: var(--ok-bg); color: var(--ok); }
+  .verdict.ng .verdict-icon { background: var(--ng-bg); color: var(--ng); }
+  .verdict-title { font-size: 17px; font-weight: 600; }
+  .verdict.ok .verdict-title { color: var(--ok); }
+  .verdict.ng .verdict-title { color: var(--ng); }
+  .verdict-sub { font-size: 13px; color: var(--text2); margin-top: 1px; }
+
+  /* metrics grid */
+  .metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 1rem; }
+  .metric { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px; }
+  .metric-label { font-size: 11px; color: var(--text2); margin-bottom: 5px; }
+  .metric-nums { font-size: 16px; font-weight: 600; }
+  .metric-unit { font-size: 11px; font-weight: 400; color: var(--text2); }
+  .progress-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 7px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 2px; transition: width 0.3s ease; }
+  .fill-ok { background: var(--ok); }
+  .fill-ng { background: var(--ng); }
+  .fill-warn { background: var(--warn); }
+
+  /* global actions */
+  .global-actions {
+    display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+    margin-bottom: 1rem;
+    padding: 10px 14px;
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+  .global-label { font-size: 12px; color: var(--text2); margin-right: 2px; }
+  .btn {
+    padding: 4px 12px; border-radius: 20px;
+    border: 0.5px solid var(--border2);
+    background: transparent; cursor: pointer;
+    font-size: 12px; color: var(--text2);
+    transition: background 0.12s; white-space: nowrap;
+  }
+  .btn:hover { background: var(--bg2); }
+  .btn.danger { border-color: var(--ng); color: var(--ng); }
+  .btn.danger:hover { background: var(--ng-bg); }
+  .btn-sep { width: 0.5px; height: 14px; background: var(--border2); margin: 0 2px; }
+
+  /* sections */
+  .sections { display: flex; flex-direction: column; gap: 10px; }
+  .section-card {
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+  }
+  .section-header {
+    padding: 11px 14px; display: flex; align-items: center; gap: 8px;
+    cursor: pointer; user-select: none;
+    transition: background 0.1s;
+  }
+  .section-header:hover { background: var(--bg2); }
+  .chevron { font-size: 10px; color: var(--text3); transition: transform 0.2s; flex-shrink: 0; }
+  .chevron.open { transform: rotate(90deg); }
+  .section-title { font-size: 14px; font-weight: 600; flex: 1; display: flex; align-items: center; gap: 8px; }
+  .badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 10px;
+    font-weight: 500;
+  }
+  .badge-ok { background: var(--ok-bg); color: var(--ok); }
+  .badge-ng { background: var(--ng-bg); color: var(--ng); }
+  .section-count { font-size: 12px; color: var(--text2); white-space: nowrap; }
+  .section-body { border-top: 0.5px solid var(--border); }
+  .section-actions {
+    display: flex; gap: 6px; padding: 8px 14px; flex-wrap: wrap;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--bg2);
+  }
+
+  /* course list */
+  .course-list { padding: 4px 0; }
+  .grade-sep {
+    font-size: 11px; color: var(--text3);
+    padding: 6px 14px 3px;
+    border-top: 0.5px solid var(--border);
+    margin-top: 2px;
+  }
+  .grade-sep:first-child { border-top: none; margin-top: 0; }
+  .course-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 7px 14px; cursor: pointer;
+    transition: background 0.1s;
+  }
+  .course-row:hover { background: var(--bg2); }
+  .check-box {
+    width: 16px; height: 16px; border-radius: 4px;
+    border: 1.5px solid var(--border2); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.1s;
+  }
+  .check-box.checked { background: var(--text); border-color: var(--text); }
+  .check-mark {
+    width: 8px; height: 5px;
+    border-left: 1.5px solid var(--bg);
+    border-bottom: 1.5px solid var(--bg);
+    transform: rotate(-45deg) translateY(-1px);
+  }
+  .course-name { flex: 1; font-size: 13px; }
+  .course-name.checked { color: var(--text2); text-decoration: line-through; }
+  .course-meta { display: flex; align-items: center; gap: 6px; }
+  .cat-tag { font-size: 10px; padding: 1px 6px; border-radius: 8px; white-space: nowrap; }
+  .cat-required     { background: var(--ng-bg); color: var(--ng); }
+  .cat-req-elective { background: var(--warn-bg); color: var(--warn); }
+  .cat-elective     { background: var(--bg2); color: var(--text2); }
+  .credit-num { font-size: 12px; color: var(--text2); min-width: 30px; text-align: right; }
+
+  /* loading / error */
+  .loading-wrap, .error-wrap {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem 1rem; gap: 12px;
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); margin-bottom: 1rem;
+  }
+  .spinner {
+    width: 28px; height: 28px;
+    border: 2.5px solid var(--border2);
+    border-top-color: var(--text);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { font-size: 13px; color: var(--text2); }
+  .error-icon { font-size: 24px; }
+  .error-title { font-size: 15px; font-weight: 600; color: var(--ng); }
+  .error-msg { font-size: 13px; color: var(--text2); text-align: center; max-width: 400px; }
+  .error-path { font-size: 11px; color: var(--text3); font-family: monospace; background: var(--bg2); padding: 4px 10px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>専攻科 修了要件チェッカー</h1>
+  <div id="app"></div>
+</div>
+
+<script>
+// ===== 設定 =====
+//
+// 【データファイルの配置について】
+//
+// このHTMLファイルと同じディレクトリに、以下の構成でJSONファイルを置いてください:
+//
+//   credit_checker.html   ← このファイル
+//   2021/
+//     ME.json             ← 機械・電子システム工学専攻
+//     DJ.json             ← 情報・制御システム工学専攻
+//     CC.json             ← 環境建設工学専攻
+//   2022/
+//     ME.json
+//     DJ.json
+//     CC.json
+//   ...（以降同様）
+//
+// JSONファイルは run_scraping.sh で生成されます:
+//   ./run_scraping.sh 2025 <department_id> me
+//   ./run_scraping.sh 2025 <department_id> dj
+//   ./run_scraping.sh 2025 <department_id> cc
+//
+// ※ run_scraping.sh が大文字ファイル名 (ME.json) で出力するため
+//    fetch時も大文字に統一しています。
+
+const DATA_BASE_PATH = './';
+
+// 修了要件（単位数）
+// 変更する場合はここを編集してください
+const REQ = {
+  general: 8,       // 一般科目
+  common: 22,       // 専門共通科目
+  specialized: 32,  // 専門専攻科目
+  total: 62,        // 合計
+  required: 39,     // 必修
+  req_elective: 10, // 選択必修
+};
+
+// 専攻科の学科定義
+// キーはJSONファイル名（大文字）に対応
+const DEPT_LABELS = {
+  ME: '機械・電子システム工学専攻',
+  DJ: '情報・制御システム工学専攻',
+  CC: '環境建設工学専攻',
+};
+const DEPT_SHORT = { ME: 'ME', DJ: 'DJ', CC: 'CC' };
+
+// 利用可能な年度リスト
+// データが存在する年度を列挙してください（新しい年度を追加したらここに足す）
+const AVAILABLE_YEARS = [2026, 2025];
+
+const CAT_LABEL = {
+  required: '必修',
+  required_elective: '選択必修',
+  elective: '選択',
+};
+
+// ===== STATE =====
+let dept = 'DJ';
+let year = 2025;
+let checked = {};
+let collapsed = {};
+let currentData = null;
+let loadState = 'idle';   // 'loading' | 'ok' | 'error'
+let loadError = '';
+
+// キャッシュ: "YEAR/DEPT" -> データ配列
+const dataCache = {};
+
+// ===== DATA LOADING =====
+async function loadData(y, d) {
+  const key = `${y}/${d}`;
+  if (dataCache[key]) return dataCache[key];
+
+  const path = `${DATA_BASE_PATH}${y}/${d.toUpperCase()}.json`;
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`HTTP ${res.status} — ${path}`);
+
+  const raw = await res.json();
+  dataCache[key] = raw;
+  return raw;
+}
+
+// 入学年度(enrollYear)と学科(d)から、全学年分のデータを収集して返す。
+//
+// 専攻科は2年制なので:
+//   1年次 → {enrollYear    }/{d}.json の grade==1 の科目
+//   2年次 → {enrollYear + 1}/{d}.json の grade==2 の科目
+//
+// 取得できない年度のファイルは警告のみでスキップする。
+async function loadAllGrades(enrollYear, d) {
+  // 専攻科の在学年数（1〜MAX_GRADE年次まで）
+  const MAX_GRADE = 2;
+  const results = [];
+
+  await Promise.all(
+    Array.from({ length: MAX_GRADE }, (_, i) => i + 1).map(async grade => {
+      const fileYear = enrollYear + (grade - 1);
+      try {
+        const data = await loadData(fileYear, d);
+        // grade が一致する科目のみ抽出し、curriculumYear を fileYear に正規化して追加
+        data
+          .filter(s => s.details.grade.includes(grade))
+          .forEach(s => results.push({
+            ...s,
+            details: { ...s.details, curriculumYear: [fileYear] },
+            _fileYear: fileYear,  // デバッグ用
+          }));
+      } catch (e) {
+        // 該当年度のファイルが存在しない場合はスキップ
+        console.warn(`${fileYear}/${d}.json が見つかりません (grade ${grade} をスキップ):`, e.message);
+      }
+    })
+  );
+
+  return results;
+}
+
+async function switchTo(enrollYear, d) {
+  year = enrollYear;
+  dept = d;
+  checked = {};
+  collapsed = {};
+  loadState = 'loading';
+  loadError = '';
+  renderApp();
+
+  try {
+    currentData = await loadAllGrades(enrollYear, d);
+    if (currentData.length === 0) {
+      throw new Error(`${enrollYear}/${d.toUpperCase()}.json が見つからないか、データが空です。`);
+    }
+    loadState = 'ok';
+  } catch (e) {
+    loadState = 'error';
+    loadError = e.message;
+    currentData = null;
+  }
+  renderApp();
+}
+
+// ===== HELPERS =====
+function getSubjectType(s) {
+  if (s.type === 'general') return 'general';
+  return s.commonCourseId ? 'common' : 'specialized';
+}
+
+function getFiltered() {
+  if (!currentData) return [];
+  // currentData は loadAllGrades() で学年・学科フィルタ済み
+  // department フィールドは小文字 (me/dj/cc) で格納されている
+  const deptLower = dept.toLowerCase();
+  return currentData.filter(s => s.details.department.includes(deptLower));
+}
+
+function getByType(type) {
+  return getFiltered().filter(s => getSubjectType(s) === type);
+}
+
+function calc() {
+  let general = 0, common = 0, specialized = 0, total = 0, required = 0, req_elective = 0;
+  getFiltered().forEach(s => {
+    if (!checked[s.id]) return;
+    const st = getSubjectType(s);
+    if (st === 'general') general += s.credits;
+    else if (st === 'common') common += s.credits;
+    else specialized += s.credits;
+    total += s.credits;
+    if (s.category === 'required') required += s.credits;
+    if (s.category === 'required_elective') req_elective += s.credits;
+  });
+  return { general, common, specialized, total, required, req_elective };
+}
+
+function isOk(c) {
+  return c.general >= REQ.general && c.common >= REQ.common &&
+    c.specialized >= REQ.specialized && c.total >= REQ.total &&
+    c.required >= REQ.required && c.req_elective >= REQ.req_elective;
+}
+
+function pct(v, max) { return Math.min(100, Math.round(v / max * 100)); }
+
+// ===== ACTIONS =====
+function selectByType(type, cat) {
+  getByType(type).forEach(s => { if (!cat || s.category === cat) checked[s.id] = true; });
+  renderApp();
+}
+function deselectByType(type, cat) {
+  getByType(type).forEach(s => { if (!cat || s.category === cat) checked[s.id] = false; });
+  renderApp();
+}
+function selectGlobal(cat) {
+  getFiltered().forEach(s => { if (!cat || s.category === cat) checked[s.id] = true; });
+  renderApp();
+}
+function deselectGlobal(cat) {
+  getFiltered().forEach(s => { if (!cat || s.category === cat) checked[s.id] = false; });
+  renderApp();
+}
+function clearAll() {
+  getFiltered().forEach(s => { checked[s.id] = false; });
+  renderApp();
+}
+function toggle(id) { checked[id] = !checked[id]; renderApp(); }
+function setDept(d) { switchTo(year, d); }
+function setYear(y) { switchTo(y, dept); }
+function toggleSection(key) { collapsed[key] = !collapsed[key]; renderApp(); }
+
+// ===== RENDER =====
+function buildTopCard() {
+  const yearOpts = AVAILABLE_YEARS.map(y =>
+    `<option value="${y}" ${y === year ? 'selected' : ''}>${y}年度入学</option>`
+  ).join('');
+  const deptTabs = Object.keys(DEPT_LABELS).map(k =>
+    `<button class="dept-tab ${k === dept ? 'active' : ''}" onclick="setDept('${k}')">` +
+    `${DEPT_SHORT[k]}（${DEPT_LABELS[k].replace('工学専攻', '').replace('システム工学専攻', '')}）` +
+    `</button>`
+  ).join('');
+  return `<div class="top-card">
+    <div class="selector-row">
+      <span class="selector-label">入学年度</span>
+      <select class="year-select" onchange="setYear(parseInt(this.value))">${yearOpts}</select>
+    </div>
+    <div class="selector-row">
+      <span class="selector-label">専攻</span>
+      <div class="dept-tabs">${deptTabs}</div>
+    </div>
+  </div>`;
+}
+
+function buildLoadingBlock() {
+  return `<div class="loading-wrap">
+    <div class="spinner"></div>
+    <div class="loading-text">${year}年度入学 ${DEPT_LABELS[dept]} のデータを読み込んでいます…</div>
+    <div class="loading-text" style="font-size:11px;color:var(--text3)">
+      参照ファイル: ${year}/${dept.toUpperCase()}.json, ${year + 1}/${dept.toUpperCase()}.json
+    </div>
+  </div>`;
+}
+
+function buildErrorBlock() {
+  const path1 = `${DATA_BASE_PATH}${year}/${dept.toUpperCase()}.json`;
+  const path2 = `${DATA_BASE_PATH}${year + 1}/${dept.toUpperCase()}.json`;
+  return `<div class="error-wrap">
+    <div class="error-icon">⚠</div>
+    <div class="error-title">データの読み込みに失敗しました</div>
+    <div class="error-msg">以下のファイルが見つからないか、読み込めませんでした。<br>
+      <code>run_scraping.sh</code> を実行してJSONファイルを生成してください。</div>
+    <div class="error-path">${path1}<br>${path2}</div>
+    <div class="error-msg" style="margin-top:4px;font-size:11px;color:var(--text3)">${loadError}</div>
+  </div>`;
+}
+
+function buildMainContent() {
+  const c = calc();
+  const ok = isOk(c);
+  const filtered = getFiltered();
+
+  // 科目種別×学年 でグルーピング
+  const groups = {};
+  filtered.forEach(s => {
+    const st = getSubjectType(s);
+    const key = st + '_' + s.details.grade[0];
+    if (!groups[key]) groups[key] = { st, grade: s.details.grade[0], items: [] };
+    groups[key].items.push(s);
+  });
+
+  const sectionDefs = [
+    { key: 'general',     label: '一般科目',    req: REQ.general,     val: c.general },
+    { key: 'common',      label: '専門共通科目', req: REQ.common,      val: c.common },
+    { key: 'specialized', label: '専門専攻科目', req: REQ.specialized, val: c.specialized },
+  ];
+
+  const metrics = [
+    { label: '一般科目',  val: c.general,      req: REQ.general },
+    { label: '専門共通',  val: c.common,       req: REQ.common },
+    { label: '専門専攻',  val: c.specialized,  req: REQ.specialized },
+    { label: '合計',      val: c.total,        req: REQ.total },
+    { label: '必修取得',  val: c.required,     req: REQ.required },
+    { label: '選択必修',  val: c.req_elective, req: REQ.req_elective },
+  ];
+
+  const metricsHtml = metrics.map(m => {
+    const p = pct(m.val, m.req);
+    const cls = m.val >= m.req ? 'fill-ok' : (p >= 60 ? 'fill-warn' : 'fill-ng');
+    return `<div class="metric">
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-nums">${m.val}<span class="metric-unit"> / ${m.req}単位</span></div>
+      <div class="progress-bar"><div class="progress-fill ${cls}" style="width:${p}%"></div></div>
+    </div>`;
+  }).join('');
+
+  const sectionsHtml = sectionDefs.map(sd => {
+    const secOk = sd.val >= sd.req;
+    const badge = `<span class="badge ${secOk ? 'badge-ok' : 'badge-ng'}">${secOk ? '達成' : '不足'}</span>`;
+    const isOpen = !collapsed[sd.key];
+    const hasReqEl = getByType(sd.key).some(s => s.category === 'required_elective');
+
+    const actionBtns = [
+      `<button class="btn" onclick="selectByType('${sd.key}','required')">必修を選択</button>`,
+      `<button class="btn danger" onclick="deselectByType('${sd.key}','required')">必修を解除</button>`,
+      hasReqEl ? `<span class="btn-sep"></span>` : '',
+      hasReqEl ? `<button class="btn" onclick="selectByType('${sd.key}','required_elective')">選択必修を選択</button>` : '',
+      hasReqEl ? `<button class="btn danger" onclick="deselectByType('${sd.key}','required_elective')">選択必修を解除</button>` : '',
+    ].join('');
+
+    let rows = '';
+    [1, 2].map(g => sd.key + '_' + g).filter(k => groups[k]).forEach(k => {
+      const g = groups[k];
+      const fileYear = year + (g.grade - 1);
+      rows += `<div class="grade-sep">${g.grade}年次 <span style="font-weight:400;color:var(--text3)">(${fileYear}年度シラバス)</span></div>`;
+      g.items.forEach(s => {
+        const chk = !!checked[s.id];
+        const catClass = s.category === 'required' ? 'cat-required'
+          : s.category === 'required_elective' ? 'cat-req-elective' : 'cat-elective';
+        rows += `<div class="course-row" onclick="toggle('${s.id}')">
+          <div class="check-box ${chk ? 'checked' : ''}">${chk ? '<div class="check-mark"></div>' : ''}</div>
+          <div class="course-name ${chk ? 'checked' : ''}">${s.name}</div>
+          <div class="course-meta">
+            <span class="cat-tag ${catClass}">${CAT_LABEL[s.category]}</span>
+            <span class="credit-num">${s.credits}単位</span>
+          </div>
+        </div>`;
+      });
+    });
+
+    return `<div class="section-card">
+      <div class="section-header" onclick="toggleSection('${sd.key}')">
+        <span class="chevron ${isOpen ? 'open' : ''}">▶</span>
+        <div class="section-title">${sd.label} ${badge}</div>
+        <span class="section-count">${sd.val} / ${sd.req} 単位</span>
+      </div>
+      ${isOpen ? `<div class="section-body">
+        <div class="section-actions">${actionBtns}</div>
+        <div class="course-list">${rows}</div>
+      </div>` : ''}
+    </div>`;
+  }).join('');
+
+  return `
+    <div class="verdict ${ok ? 'ok' : 'ng'}">
+      <div class="verdict-icon">${ok ? '✓' : '✗'}</div>
+      <div>
+        <div class="verdict-title">${ok ? '修了要件を満たしています' : '修了要件を満たしていません'}</div>
+        <div class="verdict-sub">合計 ${c.total} / ${REQ.total} 単位　
+          必修 ${c.required} / ${REQ.required} 単位　
+          選択必修 ${c.req_elective} / ${REQ.req_elective} 単位以上</div>
+      </div>
+    </div>
+
+    <div class="metrics">${metricsHtml}</div>
+
+    <div class="global-actions">
+      <span class="global-label">全体：</span>
+      <button class="btn" onclick="selectGlobal('required')">必修をすべて選択</button>
+      <button class="btn danger" onclick="deselectGlobal('required')">必修をすべて解除</button>
+      <span class="btn-sep"></span>
+      <button class="btn" onclick="selectGlobal('required_elective')">選択必修をすべて選択</button>
+      <button class="btn danger" onclick="deselectGlobal('required_elective')">選択必修をすべて解除</button>
+      <span class="btn-sep"></span>
+      <button class="btn danger" onclick="clearAll()">すべて解除</button>
+    </div>
+
+    <div class="sections">${sectionsHtml}</div>
+  `;
+}
+
+function renderApp() {
+  let content = buildTopCard();
+  if (loadState === 'loading') content += buildLoadingBlock();
+  else if (loadState === 'error') content += buildErrorBlock();
+  else content += buildMainContent();
+  document.getElementById('app').innerHTML = content;
+}
+
+// ===== INIT =====
+switchTo(year, dept);
+</script>
+</body>
+</html>

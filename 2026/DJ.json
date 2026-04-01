@@ -1,0 +1,715 @@
+[
+  {
+    "id": "bde2b599-ab84-49d6-840a-4161505594c2",
+    "name": "英語総合",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "645d8b42-33d6-4bb3-b8f6-ae450f7e4b9f",
+    "name": "現代表象特論",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "d7986983-9c71-4835-8a8c-b8df2908f9de",
+    "name": "技術英語Ⅰ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "73f2eafe-3d5e-4274-8f20-fe17aa046ad3"
+  },
+  {
+    "id": "e19b3985-13b2-4f46-b712-4af09077f40e",
+    "name": "材料力学通論",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "33d8d17b-00b0-4fa9-a88f-7eecdf2ff6b8"
+  },
+  {
+    "id": "fea069ff-5555-42a2-a961-d3ec6fbf3a16",
+    "name": "コンピュータ科学",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "fc6f8d64-34e5-4c6c-af53-0db77623decc"
+  },
+  {
+    "id": "693022d9-e12d-4bd2-8b66-cf3a8f2e2a17",
+    "name": "問題解決技法",
+    "credits": 1,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "a96c8899-ce7a-4e19-8067-409ce2bec72a"
+  },
+  {
+    "id": "f20d52e8-b530-46db-abb3-610ac7830cfc",
+    "name": "応用数学特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "770b0f8f-ec7e-4c9d-985b-ec08d38674a0"
+  },
+  {
+    "id": "a01bc92d-30d1-4159-aea9-6372dd1755cf",
+    "name": "応用物理特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "8079c800-498c-4bb0-acf8-cc4e28d0a19f"
+  },
+  {
+    "id": "63d3e7f3-bae3-4fac-ac6f-5f8c1af78681",
+    "name": "応用化学特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "0a937067-9f02-4b7b-85d7-56a2b9b908c1"
+  },
+  {
+    "id": "10010e9c-5351-41c4-830d-049b792cc02e",
+    "name": "環境工学通論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "58eed506-b2f8-4bdf-be9a-b42388b49a7c"
+  },
+  {
+    "id": "869ceb83-61e0-47d3-95d1-bcf665484159",
+    "name": "回路工学",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "8434e45c-0e48-4a7f-a84d-c9ff62bff913"
+  },
+  {
+    "id": "8fdd6fb5-932f-4398-a6f4-58cc1201592a",
+    "name": "材料学通論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "776c4068-f329-47aa-ae83-deba44822df2"
+  },
+  {
+    "id": "be61e868-cd63-4ebe-8199-db31a33049aa",
+    "name": "インターンシップ",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "7908475b-a8bd-4016-8255-2c98dfaebe1a"
+  },
+  {
+    "id": "31fa135c-e9ac-4332-a59b-a6f1bcadb454",
+    "name": "特別研究Ⅰ",
+    "credits": 6,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "604bccdd-5017-491c-bad7-89368cc06739"
+  },
+  {
+    "id": "82299987-067f-47d2-a669-2eda9cd1bc5d",
+    "name": "特別実験",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "7149de39-d8ad-41ae-9001-a25a76db318f",
+    "name": "特別演習Ⅰ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "03af29f9-e61e-44ff-be1c-c5c54ef56089"
+  },
+  {
+    "id": "fd86b1fb-7c46-44ff-b877-fc39141b8187",
+    "name": "半導体デバイス",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "4d8907c1-9946-47ad-9053-ff3b494bff87",
+    "name": "学習制御",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "3f5c4964-b766-4c8c-b71b-58cd63a1d7b5",
+    "name": "数値解析基礎論",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "8cec3fff-696f-4e7d-9d69-ebc1be692193",
+    "name": "ソフトウェア工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "f41d8b1f-bf4f-4daf-8b4c-d8dc2a06d4b5",
+    "name": "ヒューマンインターフェース",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "1a2ffae4-9e22-4429-bcae-f0a7cc20d6de",
+    "name": "現代思想",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "e4e83645-611e-419e-91fa-c250acc9fe40",
+    "name": "技術者倫理特論",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "57d5e6bd-6b6b-4923-8f3a-3511ad10a235",
+    "name": "技術英語Ⅱ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "93bea999-4947-44bf-900f-5fa5828f82eb"
+  },
+  {
+    "id": "190365ec-38db-472d-97f6-43f40c41063a",
+    "name": "地震防災工学通論",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "163b6798-6454-4e13-aab4-e3ea09e6add6"
+  },
+  {
+    "id": "dc5168b5-924e-4f07-a965-9ad005d0ac66",
+    "name": "環境化学特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "6b0b35b6-e00e-4fe0-a38f-8c4f2c78e846"
+  },
+  {
+    "id": "6b320c8d-24de-4474-82fb-e0cefa626b66",
+    "name": "創造設計工学",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "3de304fb-1fa3-4e1d-b3c3-e969c3173bd4"
+  },
+  {
+    "id": "69434f7e-3043-4568-bc41-e9d068d7f15f",
+    "name": "磁性材料工学",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "8039a165-b139-4f3f-a101-dff3d54614ee"
+  },
+  {
+    "id": "ce9b449a-fd64-49a9-b8ad-3907478409bd",
+    "name": "技術論",
+    "credits": 1,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "d9d1de9a-4f5c-4ca3-bd65-3442ccf6c8a6"
+  },
+  {
+    "id": "13af9d38-edcf-4713-a7ac-40bfceda1c9a",
+    "name": "特別研究Ⅱ",
+    "credits": 8,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "782a9ac2-0eba-4c59-aaa0-f032accf2cb0"
+  },
+  {
+    "id": "20da6b3b-d6a5-4d37-829c-479fab187330",
+    "name": "特別演習Ⅱ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "a08e2084-b57c-4f75-aa29-15123c505235"
+  },
+  {
+    "id": "b4a5d4d4-011d-4dac-82da-6e576d0fc1d2",
+    "name": "システム制御",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "b0c71bac-b779-432b-89be-c4c39f4ef7e2",
+    "name": "通信工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "e769166e-3845-4f7a-9351-100d633335c7",
+    "name": "集積回路工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "b930e7a9-1662-41d2-a689-1fc8c3525908",
+    "name": "情報通信工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "f7d9cb9b-5a2b-41f2-8437-c6bfb9321915",
+    "name": "数理モデリング",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "dj"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  }
+]

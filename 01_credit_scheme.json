@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "単位情報スキーマ",
+  "description": "木更津高専の単位情報を定義するためのJSONスキーマです。",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/creditUnit"
+  },
+  "$defs": {
+    "unitId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "単位を一意に識別するためのUUID'"
+    },
+    "departmentCode": {
+      "type": "string",
+      "description": "学科コード (m: 機械工学科, e: 電気電子工学科, d: 電子制御工学科, j: 情報工学科, c: 環境都市工学科, me: 機械・電子システム工学専攻, dj: 情報・制御システム工学専攻, cc: 環境建設工学専攻)",
+      "enum": ["m", "e", "d", "j", "c", "me", "dj", "cc"]
+    },
+    "creditUnit": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/unitId"
+        },
+        "name": {
+          "type": "string",
+          "description": "授業科目や特別学修の名称。例: '情報数学Ⅰ'"
+        },
+        "credits": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "修得できる単位数。"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["required", "elective", "required_elective", "special_study"],
+          "description": "科目区分（必修か選択か必修選択か特別学修か）。"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["general", "major"],
+          "description": "単位の種別（一般科目か専門科目か）。"
+        },
+        "details": {
+          "description": "この単位の適用条件を定義するオブジェクト。",
+          "type": "object",
+          "properties": {
+            "curriculumYear": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "description": "この単位が適用されるカリキュラムの開始年度。",
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "department": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/departmentCode"
+              },
+              "description": "対象となる学科。",
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "grade": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 7
+              },
+              "description": "対象学年（本科1-5年、専攻科1-2年）。",
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "isForInternationalStudents": {
+              "type": ["boolean", "null"],
+              "description": "留学生向けの単位か否か。trueは留学生のみ対象、falseは留学生以外のみ対象、nullは両方対象。"
+            }
+          },
+          "required": [
+            "curriculumYear",
+            "department",
+            "grade",
+            "isForInternationalStudents"
+          ]
+        },
+        "conditions": {
+          "type": "string",
+          "description": "この単位を取得する際に求められる条件。特別学修単位でのみ使用を想定。"
+        },
+        "includes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unitId"
+          },
+          "description": "この単位を取得した際に、同時に取得扱いとなる下位単位のIDリスト。特別学修単位でのみ使用を想定。",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "credits",
+        "category",
+        "type",
+        "details"
+      ]
+    }
+  }
+}

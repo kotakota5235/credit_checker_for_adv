@@ -1,0 +1,658 @@
+[
+  {
+    "id": "b531cd4b-d0b5-4fa8-b87d-08e14d6540fd",
+    "name": "英語総合",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "e653cca4-08b4-46d7-98b0-76ccb8893ce3",
+    "name": "現代表象特論",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "0b692ac9-4f43-42f9-bde7-ac2468e4a3e3",
+    "name": "技術英語Ⅰ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "73f2eafe-3d5e-4274-8f20-fe17aa046ad3"
+  },
+  {
+    "id": "d7794b28-4ff1-4806-b762-a023a87e1ace",
+    "name": "材料力学通論",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "33d8d17b-00b0-4fa9-a88f-7eecdf2ff6b8"
+  },
+  {
+    "id": "5ddc9b77-05cd-415e-8d5f-d78697fbb2dd",
+    "name": "コンピュータ科学",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "fc6f8d64-34e5-4c6c-af53-0db77623decc"
+  },
+  {
+    "id": "dfca3168-f7c6-4520-bcad-ac12ccd1ce8a",
+    "name": "問題解決技法",
+    "credits": 1,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "a96c8899-ce7a-4e19-8067-409ce2bec72a"
+  },
+  {
+    "id": "3d28832e-dc11-46b8-a89d-6bcae6ea9391",
+    "name": "応用数学特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "770b0f8f-ec7e-4c9d-985b-ec08d38674a0"
+  },
+  {
+    "id": "94d8e9a2-bb1a-47c3-b73a-5809ee1a38e4",
+    "name": "応用物理特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "8079c800-498c-4bb0-acf8-cc4e28d0a19f"
+  },
+  {
+    "id": "ef0b20e9-1d3a-4e74-b0d0-d2d5c1c0f38d",
+    "name": "応用化学特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "0a937067-9f02-4b7b-85d7-56a2b9b908c1"
+  },
+  {
+    "id": "5a7f0f2b-7198-49d8-9299-816759ba172e",
+    "name": "環境工学通論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "58eed506-b2f8-4bdf-be9a-b42388b49a7c"
+  },
+  {
+    "id": "e7789e66-64a6-490f-82f9-2d6455e5016a",
+    "name": "回路工学",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "8434e45c-0e48-4a7f-a84d-c9ff62bff913"
+  },
+  {
+    "id": "7b490602-4313-41fb-a24a-886f2210310b",
+    "name": "材料学通論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "776c4068-f329-47aa-ae83-deba44822df2"
+  },
+  {
+    "id": "b9914c11-4fb9-4b8f-9c9a-a854c0806d12",
+    "name": "インターンシップ",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "7908475b-a8bd-4016-8255-2c98dfaebe1a"
+  },
+  {
+    "id": "21f38c91-b9af-4270-9829-5e0b8399d4af",
+    "name": "特別研究Ⅰ",
+    "credits": 6,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "604bccdd-5017-491c-bad7-89368cc06739"
+  },
+  {
+    "id": "ec0d52db-200f-4dfc-80de-373c0a2c292d",
+    "name": "特別実験",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "e423e0f6-97c7-4605-a4e5-c07f60ed446a",
+    "name": "特別演習Ⅰ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "03af29f9-e61e-44ff-be1c-c5c54ef56089"
+  },
+  {
+    "id": "f6638dd6-5842-4f93-a288-6a5897bb13d8",
+    "name": "環境生物工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "9cf24758-a4e1-41a9-832c-d7927741c446",
+    "name": "構造数値解析学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "ee803b13-f4c0-44d4-ab69-2b626cd5da3d",
+    "name": "応用構造工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "180b59e9-7c8c-4f9c-b4b9-e11d6bce7637",
+    "name": "環境情報・保全工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        1
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "1f4d69b5-7f8a-4099-a4a4-71a958dac9bc",
+    "name": "現代思想",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "0fd47133-8579-4862-a7fd-f945baf16fc8",
+    "name": "技術者倫理特論",
+    "credits": 2,
+    "category": "required",
+    "type": "general",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "me",
+        "dj",
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "b52e8904-0ead-46c1-a1f7-0346033bc44c",
+    "name": "技術英語Ⅱ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "93bea999-4947-44bf-900f-5fa5828f82eb"
+  },
+  {
+    "id": "6e55176c-9f74-4c2a-be62-b778c5c05461",
+    "name": "地震防災工学通論",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "163b6798-6454-4e13-aab4-e3ea09e6add6"
+  },
+  {
+    "id": "95f8c1fa-afb1-48ef-8b21-76a08709489d",
+    "name": "環境化学特論",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "6b0b35b6-e00e-4fe0-a38f-8c4f2c78e846"
+  },
+  {
+    "id": "7ca4cc1b-d901-44dd-9dfb-e3042ad59694",
+    "name": "創造設計工学",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "3de304fb-1fa3-4e1d-b3c3-e969c3173bd4"
+  },
+  {
+    "id": "6486bdfa-ddbb-4eea-b949-4b49fec268d3",
+    "name": "磁性材料工学",
+    "credits": 2,
+    "category": "required_elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "8039a165-b139-4f3f-a101-dff3d54614ee"
+  },
+  {
+    "id": "4829cad1-5b1d-4e5e-82e9-92b2e691fe1b",
+    "name": "技術論",
+    "credits": 1,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "d9d1de9a-4f5c-4ca3-bd65-3442ccf6c8a6"
+  },
+  {
+    "id": "2de3fa28-0c3e-4601-b43f-3922210fd966",
+    "name": "特別研究Ⅱ",
+    "credits": 8,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "782a9ac2-0eba-4c59-aaa0-f032accf2cb0"
+  },
+  {
+    "id": "37a1a6f9-5491-458a-ad3e-3c294c921389",
+    "name": "特別演習Ⅱ",
+    "credits": 2,
+    "category": "required",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    },
+    "commonCourseId": "a08e2084-b57c-4f75-aa29-15123c505235"
+  },
+  {
+    "id": "84e27652-033d-4666-8556-f658d6602710",
+    "name": "環境工学特論",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "58463470-5f91-40da-a206-57951af8c1ce",
+    "name": "応用材料工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  },
+  {
+    "id": "7cc8444a-ef30-411d-a06b-fe727fc2d01c",
+    "name": "応用地盤工学",
+    "credits": 2,
+    "category": "elective",
+    "type": "major",
+    "details": {
+      "curriculumYear": [
+        2026
+      ],
+      "department": [
+        "cc"
+      ],
+      "grade": [
+        2
+      ],
+      "isForInternationalStudents": false
+    }
+  }
+]
