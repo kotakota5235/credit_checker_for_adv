@@ -1,6 +1,6 @@
 [
   {
-    "id": "b531cd4b-d0b5-4fa8-b87d-08e14d6540fd",
+    "id": "1b9b73d8-0989-46cb-afa2-0c5c24b66bbc",
     "name": "英語総合",
     "credits": 2,
     "category": "required",
@@ -21,7 +21,7 @@
     }
   },
   {
-    "id": "e653cca4-08b4-46d7-98b0-76ccb8893ce3",
+    "id": "76b2660e-b38f-46f4-853a-9f058124b946",
     "name": "現代表象特論",
     "credits": 2,
     "category": "required",
@@ -42,7 +42,7 @@
     }
   },
   {
-    "id": "0b692ac9-4f43-42f9-bde7-ac2468e4a3e3",
+    "id": "cb2e4b74-6f8e-429c-8359-0e95d36282cd",
     "name": "技術英語Ⅰ",
     "credits": 2,
     "category": "required",
@@ -59,10 +59,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "73f2eafe-3d5e-4274-8f20-fe17aa046ad3"
+    "commonCourseId": "cf468441-29c6-42f5-a115-033459639fd1"
   },
   {
-    "id": "d7794b28-4ff1-4806-b762-a023a87e1ace",
+    "id": "0a4d100c-defd-433c-a975-e2650e0d79e0",
     "name": "材料力学通論",
     "credits": 2,
     "category": "required",
@@ -79,10 +79,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "33d8d17b-00b0-4fa9-a88f-7eecdf2ff6b8"
+    "commonCourseId": "06b6574c-2686-4dfd-a15e-2b9bbbd4784a"
   },
   {
-    "id": "5ddc9b77-05cd-415e-8d5f-d78697fbb2dd",
+    "id": "8bcc59e5-2105-499b-b445-eaac1ffcae33",
     "name": "コンピュータ科学",
     "credits": 2,
     "category": "required",
@@ -99,10 +99,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "fc6f8d64-34e5-4c6c-af53-0db77623decc"
+    "commonCourseId": "f1294b96-3030-4f7c-ae59-6dfd84999b49"
   },
   {
-    "id": "dfca3168-f7c6-4520-bcad-ac12ccd1ce8a",
+    "id": "03b78b8b-4d38-416f-aeab-98b6136a96e3",
     "name": "問題解決技法",
     "credits": 1,
     "category": "required",
@@ -119,10 +119,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "a96c8899-ce7a-4e19-8067-409ce2bec72a"
+    "commonCourseId": "3a3764dc-b9e0-4946-ac3a-39e29da4141d"
   },
   {
-    "id": "3d28832e-dc11-46b8-a89d-6bcae6ea9391",
+    "id": "40325269-fb23-440a-8acf-fd7e2ba5bbc0",
     "name": "応用数学特論",
     "credits": 2,
     "category": "required_elective",
@@ -139,10 +139,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "770b0f8f-ec7e-4c9d-985b-ec08d38674a0"
+    "commonCourseId": "9e17ca28-1bbb-4b42-92b9-ba2ea0633c5a"
   },
   {
-    "id": "94d8e9a2-bb1a-47c3-b73a-5809ee1a38e4",
+    "id": "cf821933-24d7-4eaa-b53b-4949e8e2ac2b",
     "name": "応用物理特論",
     "credits": 2,
     "category": "required_elective",
@@ -159,10 +159,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "8079c800-498c-4bb0-acf8-cc4e28d0a19f"
+    "commonCourseId": "269775c0-c68b-461d-b658-be536a8b446a"
   },
   {
-    "id": "ef0b20e9-1d3a-4e74-b0d0-d2d5c1c0f38d",
+    "id": "2ea27db5-6990-47da-a057-61532d4aeb58",
     "name": "応用化学特論",
     "credits": 2,
     "category": "required_elective",
@@ -179,10 +179,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "0a937067-9f02-4b7b-85d7-56a2b9b908c1"
+    "commonCourseId": "a6c623c6-3c8e-4558-9497-10fca2c8159b"
   },
   {
-    "id": "5a7f0f2b-7198-49d8-9299-816759ba172e",
+    "id": "4c68fd91-5501-4e70-a101-1229a9ddf964",
     "name": "環境工学通論",
     "credits": 2,
     "category": "required_elective",
@@ -199,10 +199,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "58eed506-b2f8-4bdf-be9a-b42388b49a7c"
+    "commonCourseId": "a84e1864-626d-40bb-aa0a-6f072185ad3d"
   },
   {
-    "id": "e7789e66-64a6-490f-82f9-2d6455e5016a",
+    "id": "bde558a1-8f7c-4e72-a4b4-1d15907be50d",
     "name": "回路工学",
     "credits": 2,
     "category": "required_elective",
@@ -219,10 +219,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "8434e45c-0e48-4a7f-a84d-c9ff62bff913"
+    "commonCourseId": "f37ccae2-0e80-4b33-99b0-c93e1dd0d081"
   },
   {
-    "id": "7b490602-4313-41fb-a24a-886f2210310b",
+    "id": "dedbcde1-d232-4913-ba70-9917b12dccbc",
     "name": "材料学通論",
     "credits": 2,
     "category": "required_elective",
@@ -239,10 +239,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "776c4068-f329-47aa-ae83-deba44822df2"
+    "commonCourseId": "6eebf906-3a81-41dc-b40b-195114ca9aa8"
   },
   {
-    "id": "b9914c11-4fb9-4b8f-9c9a-a854c0806d12",
+    "id": "bbc349c2-67a3-4adf-9ee4-d0e3de3ccd13",
     "name": "インターンシップ",
     "credits": 2,
     "category": "elective",
@@ -259,10 +259,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "7908475b-a8bd-4016-8255-2c98dfaebe1a"
+    "commonCourseId": "310c696d-984e-4805-a4ab-e46ca89f6918"
   },
   {
-    "id": "21f38c91-b9af-4270-9829-5e0b8399d4af",
+    "id": "9a4cc7cf-8909-4ee9-86ea-ef5182450936",
     "name": "特別研究Ⅰ",
     "credits": 6,
     "category": "required",
@@ -278,11 +278,10 @@
         1
       ],
       "isForInternationalStudents": false
-    },
-    "commonCourseId": "604bccdd-5017-491c-bad7-89368cc06739"
+    }
   },
   {
-    "id": "ec0d52db-200f-4dfc-80de-373c0a2c292d",
+    "id": "eb713781-d9ba-4bca-8c55-656b0db5d9af",
     "name": "特別実験",
     "credits": 2,
     "category": "required",
@@ -301,7 +300,7 @@
     }
   },
   {
-    "id": "e423e0f6-97c7-4605-a4e5-c07f60ed446a",
+    "id": "ab591800-44cf-438d-a2e4-9dd7247f6d93",
     "name": "特別演習Ⅰ",
     "credits": 2,
     "category": "required",
@@ -317,11 +316,10 @@
         1
       ],
       "isForInternationalStudents": false
-    },
-    "commonCourseId": "03af29f9-e61e-44ff-be1c-c5c54ef56089"
+    }
   },
   {
-    "id": "f6638dd6-5842-4f93-a288-6a5897bb13d8",
+    "id": "c9f11366-ef2c-4048-93f9-39b9156d254e",
     "name": "環境生物工学",
     "credits": 2,
     "category": "elective",
@@ -340,7 +338,7 @@
     }
   },
   {
-    "id": "9cf24758-a4e1-41a9-832c-d7927741c446",
+    "id": "dc6e15b4-328d-4d65-8228-0dea9d242643",
     "name": "構造数値解析学",
     "credits": 2,
     "category": "elective",
@@ -359,7 +357,7 @@
     }
   },
   {
-    "id": "ee803b13-f4c0-44d4-ab69-2b626cd5da3d",
+    "id": "6c7d9f12-b3d6-42f2-a607-efdb571a5a90",
     "name": "応用構造工学",
     "credits": 2,
     "category": "elective",
@@ -378,7 +376,7 @@
     }
   },
   {
-    "id": "180b59e9-7c8c-4f9c-b4b9-e11d6bce7637",
+    "id": "4dc734ee-af84-49f5-bd63-a00db15989da",
     "name": "環境情報・保全工学",
     "credits": 2,
     "category": "elective",
@@ -397,7 +395,7 @@
     }
   },
   {
-    "id": "1f4d69b5-7f8a-4099-a4a4-71a958dac9bc",
+    "id": "1cc56f2b-e95f-492b-8373-b7624c20a3e2",
     "name": "現代思想",
     "credits": 2,
     "category": "required",
@@ -418,7 +416,7 @@
     }
   },
   {
-    "id": "0fd47133-8579-4862-a7fd-f945baf16fc8",
+    "id": "7567ca17-4742-4863-8230-eb68606781eb",
     "name": "技術者倫理特論",
     "credits": 2,
     "category": "required",
@@ -439,7 +437,7 @@
     }
   },
   {
-    "id": "b52e8904-0ead-46c1-a1f7-0346033bc44c",
+    "id": "6f1ef602-5aa3-40bd-a7d1-c5593ebac175",
     "name": "技術英語Ⅱ",
     "credits": 2,
     "category": "required",
@@ -456,10 +454,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "93bea999-4947-44bf-900f-5fa5828f82eb"
+    "commonCourseId": "cf4a8c26-9dbc-4531-ad9c-bf9f0766fbdf"
   },
   {
-    "id": "6e55176c-9f74-4c2a-be62-b778c5c05461",
+    "id": "259de1c1-8d40-4b87-8a23-c0cefc77d2b0",
     "name": "地震防災工学通論",
     "credits": 2,
     "category": "required",
@@ -476,10 +474,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "163b6798-6454-4e13-aab4-e3ea09e6add6"
+    "commonCourseId": "87ec4848-3052-425d-aceb-e1ee50575a45"
   },
   {
-    "id": "95f8c1fa-afb1-48ef-8b21-76a08709489d",
+    "id": "0efcbd21-d073-4dd7-b425-0cb3687ce074",
     "name": "環境化学特論",
     "credits": 2,
     "category": "required_elective",
@@ -496,10 +494,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "6b0b35b6-e00e-4fe0-a38f-8c4f2c78e846"
+    "commonCourseId": "2ecd7f22-0721-4485-8108-dd559fce5f18"
   },
   {
-    "id": "7ca4cc1b-d901-44dd-9dfb-e3042ad59694",
+    "id": "76eee3e0-67aa-4cd8-bd86-539232e62ee1",
     "name": "創造設計工学",
     "credits": 2,
     "category": "required_elective",
@@ -516,10 +514,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "3de304fb-1fa3-4e1d-b3c3-e969c3173bd4"
+    "commonCourseId": "08a8e235-9687-431e-9db6-7e55465f7a67"
   },
   {
-    "id": "6486bdfa-ddbb-4eea-b949-4b49fec268d3",
+    "id": "94ed6872-864c-4546-be80-251b7975128f",
     "name": "磁性材料工学",
     "credits": 2,
     "category": "required_elective",
@@ -536,10 +534,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "8039a165-b139-4f3f-a101-dff3d54614ee"
+    "commonCourseId": "15241972-44bc-4c5c-b25a-d2d2eb90f2e6"
   },
   {
-    "id": "4829cad1-5b1d-4e5e-82e9-92b2e691fe1b",
+    "id": "b1ebfacb-fc7a-494a-bfdd-07324e3916c7",
     "name": "技術論",
     "credits": 1,
     "category": "elective",
@@ -556,10 +554,10 @@
       ],
       "isForInternationalStudents": false
     },
-    "commonCourseId": "d9d1de9a-4f5c-4ca3-bd65-3442ccf6c8a6"
+    "commonCourseId": "e86425db-86ad-456b-9a3c-07137e33338c"
   },
   {
-    "id": "2de3fa28-0c3e-4601-b43f-3922210fd966",
+    "id": "9c2139a9-b133-4262-a431-aa27de39549c",
     "name": "特別研究Ⅱ",
     "credits": 8,
     "category": "required",
@@ -575,11 +573,10 @@
         2
       ],
       "isForInternationalStudents": false
-    },
-    "commonCourseId": "782a9ac2-0eba-4c59-aaa0-f032accf2cb0"
+    }
   },
   {
-    "id": "37a1a6f9-5491-458a-ad3e-3c294c921389",
+    "id": "a22f6a0c-3d22-49c8-bbbb-f3d8afeb5495",
     "name": "特別演習Ⅱ",
     "credits": 2,
     "category": "required",
@@ -595,11 +592,10 @@
         2
       ],
       "isForInternationalStudents": false
-    },
-    "commonCourseId": "a08e2084-b57c-4f75-aa29-15123c505235"
+    }
   },
   {
-    "id": "84e27652-033d-4666-8556-f658d6602710",
+    "id": "4ef942f2-608b-41de-b333-360dffc2ef6e",
     "name": "環境工学特論",
     "credits": 2,
     "category": "elective",
@@ -618,7 +614,7 @@
     }
   },
   {
-    "id": "58463470-5f91-40da-a206-57951af8c1ce",
+    "id": "a78266bc-88ad-4e09-9d9a-b7ff162d2ca7",
     "name": "応用材料工学",
     "credits": 2,
     "category": "elective",
@@ -637,7 +633,7 @@
     }
   },
   {
-    "id": "7cc8444a-ef30-411d-a06b-fe727fc2d01c",
+    "id": "c4cb8b21-65f6-4dec-baf8-5361989309f1",
     "name": "応用地盤工学",
     "credits": 2,
     "category": "elective",

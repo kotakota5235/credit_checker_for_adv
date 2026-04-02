@@ -38,11 +38,11 @@ MatchKey = Tuple[str, int, str, tuple]
 # 各専攻で「別々に開講される同名科目」がここに該当する。
 # --exclude-names オプションでコマンドラインからも追加可能。
 SPECIALIZED_ONLY_NAMES: List[str] = [
-    "特別研究I",
-    "特別研究II",
+    "特別研究Ⅰ",
+    "特別研究Ⅱ",
     "特別実験",
-    "特別演習I",
-    "特別演習II",
+    "特別演習Ⅰ",
+    "特別演習Ⅱ",
 ]
 
 
